@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatoyant</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <h1 class="navbar__logo">Chatoyant</h1>
+        <p class="navbar__description">程序员 游戏开发者 网页开发者 人</p>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="hero__container">
+        <h1 class="hero__heading">我是 <span>Chatoyant</span></h1>
+        <p class="hero__description">我喜欢上传视频</p>
+        <iframe width="400" height="350" src="https://www.youtube.com/embed/XzKFSp_EDMU" title="I use CHATGPT to make tic-tac-toe 2.This is what happend...... Ep.1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+
+<!-- Projects Section -->
+  <style>
+
+    /* 通用样式 */
+    h1 {
+      text-align: center;
+      margin: 50px;
+      color: #131313;
+    }
+
+    .page {
+      display: none;
+      color: #131313;
+      text-align: center;
+      margin: 50px;
+    }
+
+    /* 显示当前页面 */
+    .page.active {
+      display: block;
+    }
+
+    button {
+      display: inline-block;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+
+  </style>
+</head>
+<body>
+  <h1>项目</h1>
+
+  <!-- 按钮导航 -->
+  <button class="website" onclick="switchPage('page1')">网站</button>
+  <button class="game" onclick="switchPage('page2')">游戏</button>
+
+  <!-- 各个界面内容 -->
+  <div id="page1" class="page active">
+    <button class="page1"><a href="https://703.chatoyant.top">703</a></button>
+    <button class="page1"><a href="https://squirrel.chatoyant.top">松鼠</a></button>
+  </div>
+
+  <div id="page2" class="page">
+    <button class="page2"><a href="/Website/2048/index.html"><h2>2048</h2><p>2048小游戏</p></a></button>
+  </div>
+
+  <script>
+    /**
+     * 切换界面
+     * @param {string} pageId - 要切换到的界面的 ID
+     */
+    function switchPage(pageId) {
+      // 获取所有页面元素
+      const pages = document.querySelectorAll('.page');
+
+      // 遍历并隐藏所有页面
+      pages.forEach(page => page.classList.remove('active'));
+
+      // 显示目标页面
+      document.getElementById(pageId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+      <div class="footer__links">
+
+      <section class="social__media">
+        <div class="social__media--wrap">
+          <div class="social__icons">
+            <a href="/" class="social__icon--link" target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="/" class="social__icon--link"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="/" class="social__icon--link"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="/" class="social__icon--link"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="/" class="social__icon--link"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

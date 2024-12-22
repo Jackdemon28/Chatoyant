@@ -1,145 +1,722 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatoyant</title>
-    <link rel="stylesheet" href="index.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <!-- Navbar Section -->
-    <nav class="navbar">
-      <div class="navbar__container">
-        <h1 class="navbar__logo">Chatoyant</h1>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- owl carousel css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- magnific popup css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+  <header class="header-area">
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <!-- brand -->
+        <a href="index.html" class="navbar-brand">Chatoyant</a>
+        <!-- toggler/collapsible button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <i class="fas fa-bars"></i>
+        </button>
+        <!-- navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#home" class="nav-link active" data-scroll-nav="0">主页</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link" data-scroll-nav="1">关于我们</a>
+            </li>
+            <li class="nav-item">
+              <a href="#services" class="nav-link" data-scroll-nav="2">服务</a>
+            </li>
+            <li class="nav-item">
+              <a href="#portfolio" class="nav-link" data-scroll-nav="3">作品</a>
+            </li>
+            <li class="nav-item">
+              <a href="#testimonials" class="nav-link" data-scroll-nav="4">合作者</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link" data-scroll-nav="6">联系</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
-
-    <!-- Hero Section -->
-    <div class="hero">
-      <div class="hero__container">
-        <h1 class="hero__heading">我是 <span>Chatoyant</span></h1>
-        <p class="hero__description">我喜欢上传视频</p>
-        <iframe width="400" height="350" src="https://www.youtube.com/embed/XzKFSp_EDMU" title="I use CHATGPT to make tic-tac-toe 2.This is what happend...... Ep.1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </div>
-
-<!-- Projects Section -->
-  <style>
-
-    /* 通用样式 */
-    h1 {
-      text-align: center;
-      margin: 50px;
-      color: #131313;
-    }
-
-    .page {
-      display: none;
-      color: #131313;
-      text-align: center;
-      margin: 50px;
-    }
-
-    /* 显示当前页面 */
-    .page.active {
-      display: block;
-    }
-
-    button {
-      display: inline-block;
-      text-align: center;
-      padding: 10px 20px;
-      font-size: 16px;
-      margin: 10px;
-      cursor: pointer;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-    }
-
-    a {
-      text-decoration: none;
-      color: #fff;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-
-  </style>
-</head>
-<body>
-  <h1>项目</h1>
-
-  <!-- 按钮导航 -->
-  <button class="website" onclick="switchPage('page1')">网站</button>
-  <button class="game" onclick="switchPage('page2')">游戏</button>
-
-  <!-- 各个界面内容 -->
-  <div id="page1" class="page active">
-    <button class="page1"><a href="https://class703.chatoyant.top">703</a></button>
-    <button class="page1"><a href="https://squirrel.chatoyant.top">松鼠</a></button>
-    <button class="page1"><a href="https://ytchatoyant.gumroad.com/">商店</a></button>
-  </div>
-
-  <div id="page2" class="page">
-    <button class="page2"><a href="2048.html"><h2>2048</h2><p>2048小游戏</p></a></button>
-  </div>
-
-  <script>
-    /**
-     * 切换界面
-     * @param {string} pageId - 要切换到的界面的 ID
-     */
-    function switchPage(pageId) {
-      // 获取所有页面元素
-      const pages = document.querySelectorAll('.page');
-
-      // 遍历并隐藏所有页面
-      pages.forEach(page => page.classList.remove('active'));
-
-      // 显示目标页面
-      document.getElementById(pageId).classList.add('active');
-    }
-  </script>
-</body>
-</html>
-
-    <!-- Footer Section -->
-    <div class="footer__container">
-      <div class="footer__links">
-
-      <section class="social__media">
-        <div class="social__media--wrap">
-          <div class="social__icons">
-            <a href="/" class="social__icon--link" target="_blank"
-              ><i class="fab fa-facebook"></i
-            ></a>
-            <a href="/" class="social__icon--link"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a href="/" class="social__icon--link"
-              ><i class="fab fa-youtube"></i
-            ></a>
-            <a href="/" class="social__icon--link"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <a href="/" class="social__icon--link"
-              ><i class="fab fa-twitter"></i
-            ></a>
+    <!-- home section -->
+    <section class="home" id="home" data-scroll-index="0">
+      <div class="header-content d-flex align-items-center">
+        <div id="parallax">
+          <div class="header-shape shape-one" data-depth="0.10">
+            <img src="shape-1.png" alt="">
+          </div>
+          <div class="header-shape shape-two" data-depth="0.30">
+            <img src="shape-2.png" alt="">
+          </div>
+          <div class="header-shape shape-three" data-depth="0.40">
+            <img src="shape-3.png" alt="">
+          </div>
+          <div class="header-shape shape-fore" data-depth="0.60">
+            <img src="shape-2.png" alt="">
+          </div>
+          <div class="header-shape shape-five" data-depth="0.20">
+            <img src="shape-1.png" alt="">
+          </div>
+          <div class="header-shape shape-six" data-depth="0.15">
+            <img src="shape-4.png" alt="">
+          </div>
+          <div class="header-shape shape-seven" data-depth="0.50">
+            <img src="shape-5.png" alt="">
+          </div>
+          <div class="header-shape shape-eight" data-depth="0.40">
+            <img src="shape-3.png" alt="">
+          </div>
+          <div class="header-shape shape-nine" data-depth="0.20">
+            <img src="shape-6.png" alt="">
+          </div>
+          <div class="header-shape shape-ten" data-depth="0.30">
+            <img src="shape-3.png" alt="">
           </div>
         </div>
-      </section>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="home-text">
+                <h4>HELLO 我是</h4>
+                <h1>Chatoyant</h1>
+                <p>一个前端开发者和程序猿</p>
+                <div class="home-btn">
+                  <a href="#portfolio" class="btn-1">看我的作品</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="home-img d-none d-lg-block">
+                <img src="profile-pic.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- header social -->
+        <div class="header-social">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="header-social-icon">
+                  <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>         
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+  <!-- header section end -->
+  <!-- about us section start -->
+  <section class="about-area section-padding" data-scroll-index="1" id="about" >
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title">
+            <h4>关于</h4>
+            <h2>我的个人 <span>简介</span></h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="about-content">
+            <h5 class="about-title">我是个 <span>程序猿</span> 和网页开发者</h5>
+            <p class="details">"欢迎来到我的网站！我是一名专业的网页开发者，专注于将复杂的代码转化为直观、互动的在线体验。凭借对前端和后端技术的深刻理解，我致力于构建既美观又功能强大的网站，旨在为用户提供无与伦比的网络浏览体验。让我们一起探索数字世界的无限可能！" - Kimi</p>
+               <ul>
+                 <li>
+                   <div class="single-info d-flex align-items-center">
+                     <div class="info-icon text-center">
+                       <i class="fa fa-calendar"></i>
+                     </div>
+                     <div class="info-text">
+                       <p><span>出生日期:</span>2012 Feb. 28th</p>
+                     </div>
+                   </div> <!-- single info -->
+                 </li>
+                 <li>
+                  <div class="single-info d-flex align-items-center">
+                    <div class="info-icon text-center">
+                      <i class="fa fa-envelope"></i>
+                    </div>
+                    <div class="info-text">
+                      <p><span>我の邮箱:</span> ytjack.demon@gmail.com</p>
+                    </div>
+                  </div> <!-- single info -->
+                </li>
+                <li>
+                  <div class="single-info d-flex align-items-center">
+                    <div class="info-icon text-center">
+                      <i class="fa fa-phone"></i>
+                    </div>
+                    <div class="info-text">
+                      <p><span>癫话号码:</span> 就不告诉你~就不告诉你~就不告诉你~</p>
+                    </div>
+                  </div> <!-- single info -->
+                </li>
+                <li>
+                  <div class="single-info d-flex align-items-center">
+                    <div class="info-icon text-center">
+                      <i class="fa fa-map-marker"></i>
+                    </div>
+                    <div class="info-text">
+                      <p><span>位置:</span> 地球上,别找我!</p>
+                    </div>
+                  </div> <!-- single info -->
+                </li>
+                <li>
+                  <div class="single-info d-flex align-items-center">
+                    <div class="info-icon text-center">
+                      <i class="fa fa-university"></i>
+                    </div>
+                    <div class="info-text">
+                      <p><span>学位:</span> BA-HSAS 703</p>
+                    </div>
+                  </div> <!-- single info -->
+                </li>
+                <li>
+                  <div class="single-info d-flex align-items-center">
+                    <div class="info-icon text-center">
+                      <i class="fa fa-user"></i>
+                    </div>
+                    <div class="info-text">
+                      <p><span>网站:</span> www.chatoyant.top</p>
+                    </div>
+                  </div> <!-- single info -->
+                </li>
+               </ul>
+               <a href="#contact" class="hire-me">找我合作</a>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xl-5 offset-xl-1">
+          <div id="skill-bar-wrapper">
+            <div class="text-left">
+              <!-- C++ -->
+              <h4> C++ <span style="float: right;">114514%</span></h4>
+              <div class="skillbar-container" data-percent="114514%">
+                <div class="skills"></div>
+              </div>
+              <!-- Java -->
+              <h4> Java <span style="float: right;">85%</span></h4>
+              <div class="skillbar-container" data-percent="75%">
+                <div class="skills"></div>
+              </div>
+               <!-- HTML -->
+               <h4> HTML <span style="float: right;">95%</span></h4>
+               <div class="skillbar-container" data-percent="95%">
+                 <div class="skills"></div>
+               </div>
+               <!-- Java -->
+               <h4> CSS <span style="float: right;">99.999999%</span></h4>
+               <div class="skillbar-container" data-percent="99%">
+                 <div class="skills"></div>
+               </div>
+                <!-- Javascript -->
+                <h4> Javascript <span style="float: right;">85%</span></h4>
+                <div class="skillbar-container" data-percent="85%">
+                  <div class="skills"></div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
+  <!-- about us section end -->
+  <!-- services section start -->
+  <section class="services section-padding" data-scroll-index="2" id="services">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title">
+            <h4>服务</h4>
+            <h2>服务 <span>我提供</span></h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fas fa-laptop"></i>
+            </div>
+            <h3>网站开发</h3>
+            <p>"
+              我们提供全面的网页开发服务，从创意构思到实际编码，再到网站上线和维护，我们致力于以精湛的技术、创新的设计和用户为中心的体验，为您打造专业、高效且响应迅速的在线平台" - Kimi</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fas fa-edit"></i>
+            </div>
+            <h3>视频剪辑</h3>
+            <p>"我们提供专业的视频剪辑服务，旨在通过精湛的剪辑技术将您的视频内容提升到新的高度,我们的目标是让您的视频内容在视觉和听觉上都能给观众留下深刻印象，无论是用于营销、教育还是娱乐，我们都能提供定制化的剪辑服务，满足您的特定需求" - Kimi</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>编程</h3>
+            <p>"我们提供定制化的编程服务，涵盖从前端到后端的全方位软件开发。我们的团队精通多种编程语言和技术栈，能够根据您的需求设计、开发并优化软件解决方案。无论是构建复杂的企业级应用、开发高效的算法，还是创建用户友好的移动应用，我们都致力于以精湛的技术、创新的思维和对细节的专注，确保您的项目能够高效运行并满足所有技术规格
+              " - Kimi</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3>美观的设计</h3>
+            <p>"我们提供创新的设计服务，专注于将您的品牌和产品转化为引人注目的视觉体验。我们的设计师团队擅长品牌识别、UI/UX设计、图形设计和多媒体制作，致力于通过深入理解您的业务目标和用户需求，创造出既美观又实用的设计方案。无论是网站界面、应用程序还是营销材料，我们都致力于提供定制化的设计解决方案，以增强用户体验并推动您的业务增长" - Kimi</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <h3>推销</h3>
+            <p>我们提供专业的703推销服务,让大家走进并购买你的产品</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fas fa-mobile"></i>
+            </div>
+            <h3>游戏代打</h3>
+            <p>"我们提供专业的游戏代打服务，旨在帮助玩家在忙碌或技巧提升期间实现游戏目标。我们的团队由经验丰富的游戏高手组成，他们精通各类游戏机制和战术策略，能够为您提供高效、安全的游戏进度推进。无论是提升等级、完成任务还是获取稀有装备，我们都能确保在不遵守游戏规则和道德标准的前提下，为您的游戏角色带来显著的进步和成就。选择我们的代打服务，让您的成为封号斗罗!(别找我们)。" - Kimi</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   <!-- services section end -->
+   <!-- portfolio section start -->
+   <section class="img-gallery section-padding" data-scroll-index="3" id="portfolio">
+     <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title">
+            <h4>我们的作品</h4>
+            <h2>最新 <span>作品</span></h2>
+          </div>
+        </div>
+      </div>
+      <!-- filter btn -->
+      <div class="row">
+        <div class="col-lg-8 d-flex justify-content-center sortBtn flex-wrap">
+          <a href="#" class="filter-btn active" data-filter="*">所有</a>
+          <a href="#" class="filter-btn" data-filter=".wordpress">Wordpress</a>
+          <a href="#" class="filter-btn" data-filter=".photoshop">Photoshop</a>
+          <a href="#" class="filter-btn" data-filter=".web-design">网络设计</a>
+        </div>
+      </div>
+      <!-- portfolio items -->
+      <div class="row grid">
+        <div class="col-lg-4 col-md-6 col-sm-6 wordpress">
+          <div class="single-work text-center mt-30">
+            <div class="work-image">
+              <img src="portfolio-1.jpg" alt="">
+            </div>
+            <div class="work-overlay">
+              <div class="work-content">
+                <h3 class="work-title">产品设计</h3>
+                <ul>
+                  <li><a href="portfolio-1.jpg" class="image-popup"><i class="fa fa-plus"></i></a></li>
+                  <li><a href="#"><i class="fa fa-link"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div> <!-- single work -->
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 photoshop">
+          <div class="single-work text-center mt-30">
+            <div class="work-image">
+              <img src="portfolio-2 .png" alt="">
+            </div>
+            <div class="work-overlay">
+              <div class="work-content">
+                <h3 class="work-title">703</h3>
+                <ul>
+                  <li><a href="portfolio-2 .png" class="image-popup"><i class="fa fa-plus"></i></a></li>
+                  <li><a href="https://class703.chatoyant.top"><i class="fa fa-link"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div> <!-- single work -->
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 wordpress">
+          <div class="single-work text-center mt-30">
+            <div class="work-image">
+              <img src="portfolio-3.jpg" alt="">
+            </div>
+            <div class="work-overlay">
+              <div class="work-content">
+                <h3 class="work-title">产品设计</h3>
+                <ul>
+                  <li><a href="portfolio-3.jpg" class="image-popup"><i class="fa fa-plus"></i></a></li>
+                  <li><a href="#"><i class="fa fa-link"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div> <!-- single work -->
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 web-design">
+          <div class="single-work text-center mt-30">
+            <div class="work-image">
+              <img src="portfolio-4.jpg" alt="">
+            </div>
+            <div class="work-overlay">
+              <div class="work-content">
+                <h3 class="work-title">产品设计</h3>
+                <ul>
+                  <li><a href="portfolio-4.jpg" class="image-popup"><i class="fa fa-plus"></i></a></li>
+                  <li><a href="#"><i class="fa fa-link"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div> <!-- single work -->
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 photoshop">
+          <div class="single-work text-center mt-30">
+            <div class="work-image">
+              <img src="portfolio-5.jpg" alt="">
+            </div>
+            <div class="work-overlay">
+              <div class="work-content">
+                <h3 class="work-title">产品设计</h3>
+                <ul>
+                  <li><a href="portfolio-5.jpg" class="image-popup"><i class="fa fa-plus"></i></a></li>
+                  <li><a href="#"><i class="fa fa-link"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div> <!-- single work -->
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 photoshop">
+          <div class="single-work text-center mt-30">
+            <div class="work-image">
+              <img src="portfolio-6.jpg" alt="">
+            </div>
+            <div class="work-overlay">
+              <div class="work-content">
+                <h3 class="work-title">产品设计</h3>
+                <ul>
+                  <li><a href="portfolio-6.jpg" class="image-popup"><i class="fa fa-plus"></i></a></li>
+                  <li><a href="#"><i class="fa fa-link"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div> <!-- single work -->
+        </div>
+      </div>
+     </div>
+   </section>
+    <!-- portfolio section end -->
+    <!-- call to action start -->
+    <section class="call-to-action section-padding">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-8 col-lg-9">
+            <div class="call-action-content text-center">
+              <h2 class="action-title">我们把所有的事情都做得很好</h2>
+              <p>完美 帅气 聪明 男/女 <span>神</span></p>
+                <ul>
+                  <li><a href="https://class703.chatoyant.top" class="btn btn-1">去703</a></li>
+                  <li><a href="#contact" class="btn btn-2"> 联系我们!</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- call to action end --> 
+    <!-- testimonials section start -->
+    <section class="testimonials section-padding" data-scroll-index="4" id="testimonials">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-title">
+              <h4>合作者</h4>
+              <h2>我们的703合作者  <span>说</span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="testimonial-slider owl-carousel">
+            <div class="testimonial-item">
+              <div class="img-box">
+                <img src="1.jpg" alt="">
+                <i class="fas fa-quote-right"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos asperiores veritatis doloremque
+                 laudantium mollitia aperiam.</p>
+                 <h3>Mark Parker</h3>
+                 <span>UI designer</span>
+                 <div class="rating">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                 </div>
+            </div>
+            <div class="testimonial-item">
+              <div class="img-box">
+                <img src="4.jpg" alt="">
+                <i class="fas fa-quote-right"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos asperiores veritatis doloremque
+                 laudantium mollitia aperiam.</p>
+                 <h3>Mark Parker</h3>
+                 <span>UI designer</span>
+                 <div class="rating">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                 </div>
+            </div>
+            <div class="testimonial-item">
+              <div class="img-box">
+                <img src="2.jpg" alt="">
+                <i class="fas fa-quote-right"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos asperiores veritatis doloremque
+                 laudantium mollitia aperiam.</p>
+                 <h3>Mark Henry</h3>
+                 <span>UI designer</span>
+                 <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="testimonial-item">
+              <div class="img-box">
+                <img src="3.jpg" alt="">
+                <i class="fas fa-quote-right"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos asperiores veritatis doloremque
+                 laudantium mollitia aperiam.</p>
+                 <h3>john doe</h3>
+                 <span>web developer</span>
+                 <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     <!-- testimonials section end -->
+     <!-- pricing section start -->
+     <!-- pricing section end -->
+     <!-- faq section start -->
+     <div class="faq section-padding">
+       <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-title">
+              <h4>faq's</h4>
+              <h2>frequently <span>asked</span> queries</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div id="accordion">
+              <div class="accordion-item">
+                <div class="accordion-header" data-toggle="collapse" data-target="#collapse-01">
+                  <h3>100% Fluid Responsive - Fits my device perfectly</h3>
+                </div>
+                <div class="collapse show" id="collapse-01" data-parent="#accordion">
+                  <div class="accordion-body">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid necessitatibus tempore exercitationem facilis accusamus
+                       voluptatibus quis soluta corporis. Sint reprehenderit expedita ad.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-header collapsed" data-toggle="collapse" data-target="#collapse-02">
+                  <h3>Clean Code</h3>
+                </div>
+                <div class="collapse" id="collapse-02" data-parent="#accordion">
+                  <div class="accordion-body">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid necessitatibus tempore exercitationem facilis accusamus
+                       voluptatibus quis soluta corporis. Sint reprehenderit expedita ad.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-header collapsed" data-toggle="collapse" data-target="#collapse-03">
+                  <h3>flat, modern and clean design</h3>
+                </div>
+                <div class="collapse" id="collapse-03" data-parent="#accordion">
+                  <div class="accordion-body">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid necessitatibus tempore exercitationem facilis accusamus
+                       voluptatibus quis soluta corporis. Sint reprehenderit expedita ad.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-header collapsed" data-toggle="collapse" data-target="#collapse-04">
+                  <h3>Custom font support</h3>
+                </div>
+                <div class="collapse" id="collapse-04" data-parent="#accordion">
+                  <div class="accordion-body">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid necessitatibus tempore exercitationem facilis accusamus
+                       voluptatibus quis soluta corporis. Sint reprehenderit expedita ad.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+     </div>
+     <!-- faq section end -->
+     <!-- contact us section start-->
+     <section class="contact section-padding" data-scroll-index="6" id="contact">
+       <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-title">
+              <h4>联系我们</h4>
+              <h2>让我们 <span>知道</span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-5">
+            <div class="contact-info">
+              <h3>任何问题</h3>
+              <div class="contact-info-item">
+                <i class="fas fa-location-arrow"></i>
+                <h4>学校地址</h4>
+                <p>BA-HSAS 703</p>
+              </div>
+              <div class="contact-info-item">
+                <i class="fas fa-envelope"></i>
+                <h4>写信</h4>
+                <p>ytjack.demon@gmail.com</p>
+              </div>
+              <div class="contact-info-item">
+                <i class="fas fa-phone"></i>
+                <h4>打癫话</h4>
+                <p>就不告诉你~就不告诉你~就不告诉你~</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-7">
+            <div class="contact-form">
+              <form action="">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input type="text" placeholder="Your Name" class="form-control" required>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input type="email" placeholder="Your Email" class="form-control" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <input type="text" placeholder="Your Phone" class="form-control" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <input type="text" placeholder="Subjrct" class="form-control" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                     <textarea name="" placeholder="You Message" id="" class="form-control" required></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <button class="btn-2" type="button">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+       </div>
+     </section>
+     <!-- contact us section end-->
+     <!-- footer section start -->
+     <footer class="footer">
+       <div class="container">
+         <div class="row">
+           <div class="col-lg-12">
+             <p class="copyright-text">&copy; 2024 by cryptical coder</p>
+           </div>
+         </div>
+       </div>
+     </footer>
+     <!-- footer section end -->
 
-    <script src="app.js"></script>
-  </body>
+  <!-- jquery js -->
+  <script src="jquery.min.js"></script>
+  <!-- popper js -->
+  <script src="popper.min.js"></script>
+  <!-- scrollit js -->
+  <script src="scrollit.js"></script>
+  <!-- parallax js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  <!-- owl carousel js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- magnific popup js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <!-- isotope js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="bootstrap.min.js"></script>
+  <!-- main js -->
+  <script src="main.js"></script>
+</body>
 </html>
